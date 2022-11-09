@@ -30,11 +30,8 @@ void counting_sort(int *array, size_t size)
 		key = array[i];
 		count[key] = count[key] + 1;
 	}
-
 	for (i = 1; (int)i <= k; i++)
-	{
 		count[i] = count[i] + count[i - 1];
-	}
 	print_array(count, k + 1);
 	output = malloc(sizeof(int) * (size + 1));
 	if (output == NULL)
